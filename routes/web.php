@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['namespace' => 'admin'], function() {
+    Route::get('/home', 'DashboardController@index');
 
-Route::get('my-home', 'admin/HomeController@home');
+});
+//Route::get('/home', 'admin\HomeController@home');
 
