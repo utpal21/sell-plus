@@ -1,7 +1,6 @@
 @extends('admin.layouts.default')
 @section('content')
-    <!-- Main content -->
-    <h1>HHHh</h1>
+    <!-- Main content -->    
     <section class="content">
 
       <div class="container-fluid">

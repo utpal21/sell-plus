@@ -17,8 +17,10 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('admin.pages.login');
-
+      if (!Auth::check()) {
+          return view('admin.pages.login');
+      } 
+      return Redirect::to("dashboard");
     }  
  
     public function registration()
@@ -29,13 +31,16 @@ class AuthController extends Controller
      
     public function postLogin(Request $request)
     {
+      
         request()->validate([
         'email' => 'required',
         'password' => 'required',
         ]);
  
         $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
+       
+
+        if (Auth::attempt($credentials)) {         
             // Authentication passed...
             return redirect()->intended('dashboard');
         }
@@ -58,10 +63,9 @@ class AuthController extends Controller
     }
      
     public function dashboard()
-    {
- 
+    { 
       if(Auth::check()){
-        return view('dashboard');
+        return view('admin.pages.home');
       }
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
     }
