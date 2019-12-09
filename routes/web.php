@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('front.pages.index');
+// });
+Route::get('/', 'HomeController@index');
+
 // Route::group(['namespace' => 'admin'], function() {
 //     Route::get('/home'
 //     , 'DashboardController@index');
@@ -21,11 +23,10 @@ Route::get('/', function () {
 // });
 
 Route::get('login', 'admin\AuthController@index');
-Route::post('post-login', 'admin\AuthController@postLogin'); 
+Route::post('post-login', 'admin\AuthController@postLogin');
 Route::get('registration', 'admin\AuthController@registration');
-Route::post('post-registration', 'admin\AuthController@postRegistration'); 
-Route::get('dashboard', 'admin\AuthController@dashboard'); 
+Route::post('post-registration', 'admin\AuthController@postRegistration');
+Route::get('dashboard', 'admin\AuthController@dashboard');
 Route::get('logout', 'admin\AuthController@logout');
 
 //Route::get('/home', 'admin\HomeController@home');
-

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Fixed Sidebar</title>
+  <title>Admin | @yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -33,31 +33,25 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Fixed Layout</h1>
+            <h1>Dashboard</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Layout</a></li>
-              <li class="breadcrumb-item active">Fixed Layout</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>             
+              <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
-
-
-     @yield('content')
-     
+     @yield('content')     
   </div>
   <!-- /.content-wrapper -->
-
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.1
+      <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+    <strong>Copyright &copy; 2019 <a href="#">SellPlus</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -82,6 +76,9 @@
 <script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 
+<!-- OPTIONAL SCRIPTS -->
+<script src="{{ asset('admin/plugins/chart.js/Chart.min.js') }}"></script>
 <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
+<script src="{{ asset('admin/dist/js/pages/dashboard3.js') }}"></script>
 </body>
 </html>
