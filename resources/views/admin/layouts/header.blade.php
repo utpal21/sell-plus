@@ -112,11 +112,27 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-          <i class="fas fa-th-large"></i>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>          
         </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"></span>
+          <div class="dropdown-divider"></div>
+          <a href="{{ url('logout') }}" class="dropdown-item">
+            <!-- <i class="fas fa-envelope mr-2"></i>  -->Logout
+            <span class="float-right text-muted text-sm"></span>
+          </a> 
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer"></a>
+        </div>
       </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
+          <i class="fas fa-th-large"></i> 
+        </a>
+      </li> -->
     </ul>
   </nav>
   <!-- /.navbar -->
