@@ -5,7 +5,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="{{url('post-login')}}" method="POST" id="loinForm">
+      <form action="{{ route('admin.login.post') }}" method="POST" id="loinForm">
         {{ csrf_field() }}
         <div class="input-group mb-3">
           <input type="email" name="email" class="form-control" placeholder="Email">

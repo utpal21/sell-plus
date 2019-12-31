@@ -120,7 +120,7 @@
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header"></span>
           <div class="dropdown-divider"></div>
-          <a href="{{ url('logout') }}" class="dropdown-item">
+          <a href="{{ route('admin.logout') }}" class="dropdown-item">
             <!-- <i class="fas fa-envelope mr-2"></i>  -->Logout
             <span class="float-right text-muted text-sm"></span>
           </a> 
