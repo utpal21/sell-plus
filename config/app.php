@@ -174,6 +174,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        /**
+         * custome setting service provider
+         */
+        App\Providers\SettingServiceProvider::class
 
     ],
 
