@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Traits\FlashMessaes;
+use App\Traits\FlashMessages;
 
 class BaseController extends Controller
 {
-    use FlashMessaes;
+    use FlashMessages;
     protected $data = null;
 
     /**

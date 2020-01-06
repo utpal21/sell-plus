@@ -12,4 +12,7 @@ Route::group(['prefix'  =>  'admin'], function () {
             return view('admin.pages.home');
         })->name('admin.dashboard');
     });
+    //Seetings route
+    Route::get('/settings', 'Admin\SettingController@index')->name('admin.settings');
+    Route::post('/settings', 'Admin\SettingController@update')->name('admin.settings.update');
 });
