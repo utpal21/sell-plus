@@ -14,7 +14,7 @@
           <!-- <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{auth()->user()->name}}</a>
+          <a href="#" class="d-block"></a>
         </div>
       </div>
 
@@ -68,6 +68,24 @@
                 <a href="../layout/top-nav.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Top Navigation</p>
+                </a>
+              </li>           
+            </ul>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="" class="nav-link {{ Route::currentRouteName() == 'admin.categories.index' ? 'active' : '' }}">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Cateory
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.categories.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cateory</p>
                 </a>
               </li>           
             </ul>

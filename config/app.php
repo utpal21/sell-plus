@@ -177,7 +177,8 @@ return [
         /**
          * custome setting service provider
          */
-        App\Providers\SettingServiceProvider::class
+        App\Providers\SettingServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class
 
     ],
 
